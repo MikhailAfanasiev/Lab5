@@ -1,0 +1,163 @@
+/* Общие стили */
+body {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Сетка */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Основной контент 75%, боковая панель 25% */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #babccf;
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Nav */
+nav {
+    background-color: #11467e;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: rgb(228, 209, 209);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main */
+main {
+    padding: 20px;
+}
+
+article {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #c2dbe9;
+    padding-bottom: 1rem;
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+article time {
+    color: #666;
+    font-style: italic;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Aside */
+aside {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #c3c3ee;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* На мобильных одна колонка */
+    }
+
+    aside {
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+}
+/* Стили для аккордеона */
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #e0e7ff;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #c7d2fe;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #f9fafb;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.accordion-content.active {
+    display: block;
+}
